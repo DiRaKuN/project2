@@ -1,12 +1,24 @@
-{% extends "profiles/_base_.html" %}
-{% block content %}
-<div class="row">
-	<form action="" method="POST">
-		{% csrf_token %}
-		<input type="text" name="username" placeholder="Ваш логин" class="form-control" />
-		<input type="type" name="password" placeholder="Ваш пороль" class="form-control" />
-		
-		<button>Вход</button>
-	</form>
-</div>
-{% endblock content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+	<div class="conteiner" style="height 100vh;"> 
+		<div class="row" style="height 100vh;"> 
+			<div class="d-flex justify-content-center from-conteiner align-items-center">
+				<form action="" method="POST">
+					{% csrf_token %}
+					<input type="text" name="username" placeholder="Ваш логин" class="form-control" />
+					<input type="type" name="password" placeholder="Ваш пороль" class="form-control" />
+					<button>Вход</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -3,8 +3,7 @@
 	<div class="row">
 		<h3>{{profile.name}}</h3>
 		<h4>username: {{user.username}}</h4>
-		<a href="{% url 'logout_page' %}">Выход</a>
-		<img width="150" src="{{profile.profile_image.url}}" alt="">
+		<img class="profile_picture" width="150" src="{{profile.profile_image.url}}" alt="">
 	</div>
 {% endblock content %}
 

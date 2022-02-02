@@ -22,6 +22,9 @@ def my_profile(request):
 
 def login_page(request):
 	""" Страница для входа """
+	#для перекидывания аутентифицированного юзера 
+	if request.user.is_authenticated:
+		return redirect('')
 	if request.method == 'POST':
 		username = request.POST.get('username')
 		password = request.POST.get('password')
