@@ -34,5 +34,5 @@ def login_page(request):
 	return render(request, 'profiles/login_page.html')
 
 def logout_page(request):
-	logout(user)
+	logout(request)
 	return redirect('movie_list')
